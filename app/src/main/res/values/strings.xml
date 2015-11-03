@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">StoryApp</string>
     <string name="action_settings">Settings</string>
+    <string name="startButton">START YOUR ADVENTURE</string>
+    <string name="signalFromMars">signals from mars</string>
+    <string name="nameEditText">Enter your name to start</string>
 </resources>
