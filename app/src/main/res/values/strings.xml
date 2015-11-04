@@ -4,4 +4,5 @@
     <string name="startButton">START YOUR ADVENTURE</string>
     <string name="signalFromMars">signals from mars</string>
     <string name="nameEditText">Enter your name to start</string>
+    <string name="title_activity_story">StoryActivity</string>
 </resources>
