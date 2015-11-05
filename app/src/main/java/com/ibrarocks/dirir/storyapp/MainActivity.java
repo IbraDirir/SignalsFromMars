@@ -1,5 +1,6 @@
 package com.ibrarocks.dirir.storyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,17 +16,24 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    mNameField = (EditText)findViewById(R.id.NameEditText);
-    mStartButton = (Button) findViewById(R.id.StartButton);
-    mStartButton.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-        String name = mNameField.getText().toString();
-            Toast.makeText(MainActivity.this, name, Toast.LENGTH_LONG).show();
-        }
-    });
+        mNameField = (EditText) findViewById(R.id.NameEditText);
+        mStartButton = (Button) findViewById(R.id.StartButton);
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = mNameField.getText().toString();
+                startSheko(name);
+            }
+        });
+    }
 
+    private void startSheko(String name){
+        Intent ibra = new Intent(this,StoryActivity.class);
+        startActivity(ibra);
+        ibra.putExtra("name", name);
+
+    }
     }
 
 
-}
+
