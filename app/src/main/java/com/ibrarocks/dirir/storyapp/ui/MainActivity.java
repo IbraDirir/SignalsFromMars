@@ -1,4 +1,4 @@
-package com.ibrarocks.dirir.storyapp;
+package com.ibrarocks.dirir.storyapp.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
+
+import com.ibrarocks.dirir.storyapp.R;
 
 public class MainActivity extends AppCompatActivity {
     private EditText mNameField;
@@ -22,15 +23,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = mNameField.getText().toString();
-                startSheko(name);
+                startStory(name);
             }
         });
     }
 
-    private void startSheko(String name){
-        Intent ibra = new Intent(this,StoryActivity.class);
-        startActivity(ibra);
-        ibra.putExtra("name", name);
+    private void startStory(String name){
+        Intent intent = new Intent(this,StoryActivity.class);
+        startActivity(intent);
+        intent.putExtra(getString(R.string.key_name), name);
 
     }
     }
